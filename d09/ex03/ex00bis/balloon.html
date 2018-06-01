@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+					integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+					crossorigin="anonymous">
+	</script>
+	<title>Balloon</title>
+	<style type="text/css">
+		.elem {
+			display: block;
+			margin: auto;
+			margin-top: 100px;
+			width: 200px;
+			height: 200px;
+			background-color: rgb(255, 0, 0);
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="elem"></div>
+
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		var hue = 0;
+		$('.elem').click(function() {
+			if ($('.elem').width() == 420)
+			{
+				hue = 0;
+				$(this).css("width", "200");
+				$(this).css("height", "200");
+				$(this).css("background-color", 'hsl(' + hue + ', 100%, 50%)');
+			}
+			else
+			{
+				hue += 30;
+				$(this).css("width", "+=10");
+				$(this).css("height", "+=10");
+				$(this).css("background-color", 'hsl(' + hue + ', 100%, 50%)');
+			}
+		});
+		$('.elem').mouseleave(function() {
+			if ($('.elem').width() > 200) {
+				$(this).css("width", "-=5");
+				$(this).css("height", "-=5");
+			}
+			hue -= 30;
+			if (hue < 0)
+				hue = 360;
+			$(this).css("background-color", 'hsl(' + hue + ', 100%, 50%)');
+		});
+	});
+	</script>
+</body>
+</html>

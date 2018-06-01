@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO</title>
+	<style type="text/css">
+	.all {
+		margin: auto;
+		width: 50%;
+	}
+	.elem {
+		margin: auto;
+		margin-bottom: 12px;
+		display: block;
+		text-align: center;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding-top: 3px;
+		background: rgb(13, 209, 0);
+		color: white;
+		text-shadow: 1px 1px 1px #444;
+		font-size: 22px;
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	.button {
+			top: 10px;
+			position: relative;
+			color: white;
+			padding: 13px 28px;
+			display: block;
+			font-size: 16px;
+			font-family: Helvetica, Arial, sans-serif;
+		margin: auto;
+			-webkit-transition-duration: 0.4s;
+			transition-duration: 0.4s;
+			border-radius: 5px;
+			cursor: pointer;
+	}
+
+	.button_new {
+			background-color: #0052d6;
+	}
+	.button_new:hover {
+			background-color: white;
+			border: 2px solid #0052d6;
+			color: #0052d6;
+	}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div id="ft_list"></div>
+		<button id="new" value="New" class="button button_new" onclick="new_article()">New</button>
+	</div>
+	<script src="todo.js"></script>
+</body>
+</html>

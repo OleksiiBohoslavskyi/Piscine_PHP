@@ -1,0 +1,22 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles x and y axis coordinate, z depth coordinate,
+w homogeneous coordinates, color represented by an instance of the Color Class.
+
+An instance can be contructed with x, y, z coordinates:
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+Or with x, y, z coordinates and instance of the Color Class:
+new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'color' => $green ) );
+
+Or with x, y, z coordinates and w homogeneous coordinates:
+new Vertex( array( array( 'x' => 9.0, 'y' => 9.0, 'z' => 9.0, 'w' => 3.0  ) );
+
+X, y, z and w constitutives are converted to float.
+Any other use is undefined behaviour.
+
+The class provides the following methods :
+
+function get($var);
+Return the value of private attributes.
+
+---------------------------------------------------------------------- Vertex ->

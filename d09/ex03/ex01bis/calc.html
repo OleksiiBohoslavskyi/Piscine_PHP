@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calc</title>
+	<style type="text/css"></style>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+					integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+					crossorigin="anonymous">
+	</script>
+</head>
+<body>
+	<input type="text" name="arg1" id="arg1">
+	<select id="oper">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>s
+	</select>
+	<input type="text" name="arg2" id="arg2">
+	<input id="submit" type="submit" name="sub" value="Try me!">
+	<br>
+
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		window.setTimeout(function() {
+			alert("Please, use me...");
+		}, 30000);
+	});
+
+	$( "#submit" ).click(function() {
+		var rez;
+		var input1 = document.getElementById('arg1').value;
+		var input2 = document.getElementById('arg2').value;
+		var arg1 = parseInt(input1);
+		var arg2 = parseInt(input2);
+		var oper_f = document.getElementById('oper');
+		var oper = oper_f.options[oper_f.selectedIndex].value;
+
+		if (hasWhiteSpace(input1) || hasWhiteSpace(input2) || hasDot(input1) || hasDot(input2) || isNaN(+input1) || isNaN(+input2) || isNaN(arg1) || isNaN(arg2) || arg1 < 0 || arg2 < 0)
+		{
+			alert("Error :(");
+			return ;
+		}
+		else if ((oper == '/' || oper == '%') && arg2 == 0)
+		{
+			alert("It's over 9000!");
+			console.log("It's over 9000!");
+			return ;
+		}
+		if (oper == '+')
+			rez = arg1 + arg2;
+		else if (oper == '-')
+			rez = arg1 - arg2;
+		else if (oper == '*')
+			rez = arg1 * arg2;
+		else if (oper == '/')
+			rez = arg1 / arg2;
+		else if (oper == '%')
+			rez = arg1 % arg2;
+		console.log(rez);
+		alert(rez);
+	});
+
+	function hasWhiteSpace(s) {
+			countSpaces = s.indexOf(' ');
+			return countSpaces >= 0;
+		}
+
+	function hasDot(s) {
+		countDots = s.indexOf('.');
+		return countDots >= 0;
+	}
+	</script>
+</body>
+</html>

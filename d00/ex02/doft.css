@@ -1,0 +1,76 @@
+.top_div {
+    background-color: #909090;
+    border-radius: 10px;
+    box-shadow: black 10px 10px 10px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 1410px;
+    height: 110px;
+}
+.three_div {
+    position: relative;
+    width: 1360px;
+    height: 600px;
+    margin: 20px auto;
+}
+.repondre {
+    line-height: 5px;
+    font-family: Geneva, sans-serif;
+    font-size: 12pt;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 515px;
+    position: absolute;
+    background-color: #88FF89;
+    width: 505px;
+    height: 140px;
+    border-radius: 10px;
+    box-shadow: black 10px 10px 10px;
+}
+bigword {
+    font-family: Georgia, serif;
+    font-size: 25pt;
+}
+.button {
+    border: 1px grey solid;
+    background-color: #F3F3F3;
+}
+.left_div {
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+    width: 140px;
+    height: 425px;
+    margin-right: 30px;
+    background-color: #909090;
+    float: left;
+}
+.middle_div {
+    border-radius: 10px;
+    box-shadow: black 10px 10px 10px;
+    width: 1020px;
+    height: 580px;
+    margin-right: 30px;
+    background-color: #909090;
+    float: left;
+}
+.cluster {
+    margin-left: 10px;
+    margin-top: 10px;
+    background-image: url("resources/cluster.jpg");
+    height: 550px;
+    width: 1000px;
+}
+.right_div {
+    border-radius: 10px;
+    box-shadow: black 10px 10px 10px;
+    width: 140px;
+    height: 425px;
+    background-color: #909090;
+    float: left;
+}
+.brick {
+    background-image: url("resources/brick.jpg");
+    width: 122px;
+    height: 70px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Balloon</title>
+	<style>
+		.elem {
+			margin: auto;
+			margin-top: 5%;
+			width: 200px;
+			height: 200px;
+			background-color: rgb(255, 0, 0);
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="elem"></div>
+	<script type="text/javascript">
+	var balloon = document.querySelector(".elem");
+	var arr_colors = [255, 0, 0];
+	var tmp;
+	balloon.onclick = function()
+	{
+		var balloonWidth = balloon.offsetWidth;
+		tmp = arr_colors[2];
+		arr_colors[2] = arr_colors[1];
+		arr_colors[1] = arr_colors[0];
+		arr_colors[0] = tmp;
+		balloon.style.backgroundColor = "rgb(" + arr_colors[0] + "," + arr_colors[1] + "," + arr_colors[2] + ")";
+		if (balloonWidth > 411)
+		{
+			balloon.style.width = '200px';
+			balloon.style.height = '200px';
+		}
+		else
+		{
+			balloonWidth += 10;
+			balloon.style.width = balloonWidth + "px";
+			balloon.style.height = balloonWidth + "px";
+		}
+	}
+	balloon.onmouseout = function ()
+	{
+		var balloonWidth = balloon.offsetWidth;
+		tmp = arr_colors[0];
+		arr_colors[0] = arr_colors[1];
+		arr_colors[1] = arr_colors[2];
+		arr_colors[2] = tmp;
+		balloon.style.backgroundColor = "rgb(" + arr_colors[0] + "," + arr_colors[1] + "," + arr_colors[2] + ")";
+		if (balloonWidth > 204)
+		{
+			balloonWidth -= 5;
+			balloon.style.width = balloonWidth + "px";
+			balloon.style.height = balloonWidth + "px";
+		}
+		else
+		{
+			balloon.style.width = '200px';
+			balloon.style.height = '200px';
+		}
+	}
+</script>
+</body>
+</html>

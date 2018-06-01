@@ -1,0 +1,40 @@
+.light_green { background-color: rgb(66, 255, 66)}
+.green {background-color: rgb(137, 225, 152)}
+.dark_green {background-color: rgb(170, 227, 212)}
+.orange {background-color: rgb(255, 211, 79)}
+.yellow {background-color: rgb(255, 255, 89)}
+.brown {background-color: rgb(225, 195, 195)}
+.blue {background-color: rgb(142, 212, 255)}
+.light_blue {background-color: rgb(55, 239, 209)}
+.corporeal {background-color: rgb(255, 198, 169)}
+.pink {background-color: rgb(241, 201, 228)}
+table {
+    width: 90%;
+    table-layout: fixed;
+    margin: auto;
+    border-spacing: 0.5vw;
+}
+.a_cell_sub {
+    vertical-align: bottom;
+    text-align: left;
+    font-size: 0.7vw;
+}
+.a_cell_sup {
+    vertical-align: top;
+    text-align: right;
+    font-size: 0.7vw;
+}
+.a_cell {
+    vertical-align: center;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Impact, serif;
+}
+.l {
+    opacity: 1;
+    box-shadow: 1vw 1vw 1vw #757371;
+    transition: 0.2s all;
+    border-radius: 0.1vw;
+    border: 1px solid #ddd;
+}
+.l:hover {opacity: 0.7; transform: scale(1.15)}

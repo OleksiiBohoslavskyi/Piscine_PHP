@@ -1,0 +1,23 @@
+<- Camera ----------------------------------------------------------------------
+The Camera class handles coordinates to camera view.
+
+An instance can be contructed like:
+$cam  = new Camera( array( 'origin' => $vtxO,
+			'orientation' => $R,
+			'width' => 640,
+			'height' => 480,
+			'fov' => 60,
+			'near' => 1.0,
+			'far' => 100.0) );
+
+'origin' = Vertex
+'orientation' = Matrix
+'fov' = The projected image’s field of view in degree
+'near': The near clipping plane
+'far': The far clipping plane
+
+The class provides the following method:
+	Vertex watchVertex(Vertex $worldVertex):
+		Transforms "world" coordinates vertex into a "screen" coordinates
+		vertex.
+		---------------------------------------------------------------------- Camera ->

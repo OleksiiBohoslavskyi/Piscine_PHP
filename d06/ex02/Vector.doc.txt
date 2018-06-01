@@ -1,0 +1,47 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class waiting for 2 Vertex arrays.
+
+An instance can be contructed with ’dest’: the vector’s destination vertex,
+mandatory:
+new Vector( array( 'dest' => $dest1 ) );
+
+Or ’dest’ with ’orig’: the vector’s origin vertex, optional, by default is worth a new
+instance of the x=0, y=0, z=0, w=1 vertex:
+new Vector( array( 'orig' => $vtxO, 'dest' => $vtxZ ) );
+
+Any other use is undefined behaviour.
+
+We will also use a homogeneous system of coordinates for our vectors, but
+this time, the component w will always be worth 0.0 and will considered as an
+arbitrary vector component in the calculations, like x, y or z.
+
+The class provides the following methods :
+
+float magnitude();
+Returns the vector’s length (or "norm").
+
+Vector normalize();
+Returns a normalized version of the vector. If the vector is already
+normalized, returns a fresh copy of the vector.
+
+Vector add( Vector $rhs );
+Returns the sum vector of both vectors.
+
+Vector sub( Vector $rhs );
+Returns the difference vector of both vectors.
+
+Vector opposite();
+Returns the opposite vector.
+
+Vector scalarProduct( $k );
+Returns the multiplication of the vector with a scalar.
+
+float dotProduct( Vector $rhs );
+Returns the scalar multiplication of both vectors.
+
+float cos( Vector $rhs );
+Returns the angle’sAppendix cosine between both vectors.
+
+Vector crossProduct( Vector $rhs );
+Returns the cross multiplication of both vectors (right-hand mark!)
+---------------------------------------------------------------------- Vector ->
